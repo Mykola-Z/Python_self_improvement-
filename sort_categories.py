@@ -10,7 +10,7 @@ file_se= open("input.txt", 'r').readlines()
 dict = {}
 
 number_of_catigories= int(input('How many categories you want to find? \n or just press enter if it\'s 2: ') or '2')
-default_categories = ['NUMBERS', 'ANIMALS']
+default_categories = [ 'ANIMALS', 'NUMBERS']
 i= 0
 for i in range(number_of_catigories):
     
@@ -29,5 +29,7 @@ for i in range(0,len(file_se)):
         dict[file_se[y]].append(file_se[i])
 
 
-for i in dict : 
-    print(i+ ': \n', dict[i]) 
+for i in list(dict):
+    print (i)
+    print ("\n".join(set(dict[i])))
+    
